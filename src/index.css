@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /*  */
+  --breakpoint-s: 350px;
+  --breakpoint-xs: 360px;
+  --shadow-black: 0px 0px 8px gray;
+  --shadow-large: 0px 5px 20px black;
+  --transition-slow: all ease 0.9s;
+}
+* {
+  /* outline: 2px solid red; */
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+.mgn-bottom {
+  margin-bottom: 5%;
+}
+/* button classes */
+.btn-color {
+  background-color: rgb(17, 17, 57);
+  justify-self: flex-start;
+  margin-left: 2%;
+}
+.product-classname {
+  width: 45%;
+  margin-top: 7%;
+  padding: 2%;
+}
+.about-container {
+  background-color: white;
+}
+.core-classname {
+  background-color: rgb(235, 229, 229);
+}
+.btn-style{
+  background-color: white;
+  color: rgb(31, 30, 30);
+  width: fit-content;
+  margin-top: 5%;
+  border: 1px solid gray;
+}
+.cart-classname{
+  border-radius:1rem;
+}
