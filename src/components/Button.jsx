@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ disable, btnFunction, btnClassname, btnText }) => {
   return (
-    <div
+    <button
       className={`
          flex
          justify-self-center
@@ -33,7 +33,7 @@ const Button = ({ disable, btnFunction, btnClassname, btnText }) => {
       onClick={btnFunction}
     >
       {btnText}
-    </div>
+    </button>
   );
 };
 

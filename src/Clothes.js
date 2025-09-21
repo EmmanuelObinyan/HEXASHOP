@@ -84,7 +84,7 @@ export const arrivals=[
          name:"a black styled t-shirt",
          description :"Stay comfortable and stylish with this shirt designed for modern everyday wear. Made from high-quality fabric that feels soft yet durable, it’s built to keep you looking sharp while providing all-day comfort. The bold graphic print  design and breathable cotton texture adds a unique touch, making it easy to dress up or down. Perfect for casual outings, workdays, or weekend plans, this shirt combines timeless appeal with effortless versatility.",
          rating :"4/5",
-         price :180,
+         price :80,
          quantity:0,
          isFavourite :false
        },
@@ -95,7 +95,7 @@ export const arrivals=[
          name:"zw collection poplin shirt",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :120,
+         price :60,
          quantity:0,
          isFavourite :false 
     },
@@ -105,7 +105,7 @@ export const arrivals=[
          name:"leather bomber jacket zw collection",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :240,
+         price :70,
          quantity:0,
          isFavourite :false 
     },
@@ -115,7 +115,7 @@ export const arrivals=[
          name:"brown mc-queen t-shirt ",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :140,
+         price :80,
          quantity:0,
          isFavourite :false 
     },
@@ -125,7 +125,7 @@ export const arrivals=[
          name:"olive green graphic t-shirt",
          description :"Elevate your casual style with this olive green short-sleeve graphic T-shirt. Crafted from soft, breathable cotton, it features a bold “One Life” front print paired with an inspiring quote that adds a touch of streetwear attitude. Designed with a classic crew neckline and a relaxed fit, this versatile tee is perfect for everyday wear—whether you’re pairing it with jeans, joggers, or layering under a jacket. Durable yet comfortable, it’s a wardrobe staple that brings both comfort and style together.",
          rating :"4/5",
-         price :170,
+         price :70,
          quantity:0,
          isFavourite :false
        },
@@ -135,7 +135,7 @@ export const arrivals=[
          name:"knit sweater with embroidered design",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :100,
+         price :60,
          quantity:0,
          isFavourite :false 
     },
@@ -145,7 +145,7 @@ export const arrivals=[
          name:"girl pink bowed -dress",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :150,
+         price :55,
          quantity:0,
          isFavourite :false 
     },
@@ -155,7 +155,7 @@ export const arrivals=[
          name:"gray hooded jacket",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :120,
+         price :76,
          quantity:0,
          isFavourite :false 
     },
@@ -165,7 +165,7 @@ export const arrivals=[
          name:"asymmetric lace dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :200,
+         price :100,
          quantity:0,
          isFavourite :false 
     },
@@ -175,7 +175,7 @@ export const arrivals=[
          name:"straight jean with raw hem",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :200,
+         price :65,
          quantity:0,
          isFavourite :false 
     },
@@ -185,7 +185,7 @@ export const arrivals=[
          name:"a floral printed jacket",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :210,
+         price :21,
          quantity:0,
          isFavourite :false 
     },
@@ -195,7 +195,7 @@ export const arrivals=[
          name:"lilo stitch t-shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :100,
+         price :10,
          quantity:0,
          isFavourite :false 
     },
@@ -210,7 +210,7 @@ export const arrivals=[
          name:"a black styled t-shirt",
          description :"Stay comfortable and stylish with this shirt designed for modern everyday wear. Made from high-quality fabric that feels soft yet durable, it’s built to keep you looking sharp while providing all-day comfort. The bold graphic print  design and breathable cotton texture adds a unique touch, making it easy to dress up or down. Perfect for casual outings, workdays, or weekend plans, this shirt combines timeless appeal with effortless versatility.",
          rating :"4/5",
-         price :180,
+         price :80,
          quantity:0,
          isFavourite :false
        },
@@ -230,7 +230,7 @@ export const arrivals=[
          name:"denim shorts",
          description :"Stylish and comfortable unisex wear designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :100,
+         price :70,
          quantity:0,
          isFavourite :false 
     },  
@@ -240,7 +240,7 @@ export const arrivals=[
          name:"brown mc-queen t-shirt ",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :140,
+         price :40,
          quantity:0,
          isFavourite :false 
     },
@@ -255,7 +255,7 @@ export const menClothing=[
          name:"a black styled t-shirt",
          description :"Stay comfortable and stylish with this shirt designed for modern everyday wear. Made from high-quality fabric that feels soft yet durable, it’s built to keep you looking sharp while providing all-day comfort. The bold graphic print  design and breathable cotton texture adds a unique touch, making it easy to dress up or down. Perfect for casual outings, workdays, or weekend plans, this shirt combines timeless appeal with effortless versatility.",
          rating :"4/5",
-         price :180,
+         price :80,
          quantity:0,
          isFavourite :false
        },
@@ -265,7 +265,7 @@ export const menClothing=[
          name:"a denim jeans pant",
          description :"Stay comfortable and stylish with this pant designed for modern everyday wear. Made from high-quality fabric that feels soft yet durable, it’s built to keep you looking sharp while providing all-day comfort.  Perfect for casual outings, workdays, or weekend plans, this shirt combines timeless appeal with effortless versatility",
          rating :"4.5/5",
-         price :200,
+         price :60,
          quantity:0,
          isFavourite :false
        },
@@ -275,7 +275,7 @@ export const menClothing=[
          name:"a red-checked long-sleeve shirt",
          description :"A classic checked long sleeve shirt tailored for a clean, versatile look. Perfect for layering with suits or wearing casually, offering comfort and timeless style.",
          rating :"4/5",
-         price :130,
+         price :30,
          quantity:0,
          isFavourite :false
        },
@@ -285,7 +285,7 @@ export const menClothing=[
          name:"a bright orange t-shirt",
          description :"A modern orange t-shirt  designed for a polished and versatile look. Perfect for formal occasions with timeless style.",
          rating :"4.5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false
        },
@@ -295,7 +295,7 @@ export const menClothing=[
          name:"olive green graphic t-shirt",
          description :"Elevate your casual style with this olive green short-sleeve graphic T-shirt. Crafted from soft, breathable cotton, it features a bold “One Life” front print paired with an inspiring quote that adds a touch of streetwear attitude. Designed with a classic crew neckline and a relaxed fit, this versatile tee is perfect for everyday wear—whether you’re pairing it with jeans, joggers, or layering under a jacket. Durable yet comfortable, it’s a wardrobe staple that brings both comfort and style together.",
          rating :"4/5",
-         price :170,
+         price :30,
          quantity:0,
          isFavourite :false
        },
@@ -305,7 +305,7 @@ export const menClothing=[
          name:"striped green long-sleeved shirt",
          description :"A sleeved shirt designed for occasions and style.  Perfect for casual outings, chilly days, or layering for a trendy summer look.",
          rating :"4.5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -315,7 +315,7 @@ export const menClothing=[
          name:"a bright white t-shirt",
          description :"A nice shirt designed for occasions and style.  Perfect for casual outings, or layering for a trendy summer look.",
          rating :"4/5",
-         price :190,
+         price :35,
          quantity:0,
          isFavourite :false 
     },
@@ -325,7 +325,7 @@ export const menClothing=[
          name:"v collared pink shirt",
          description :"A stylish shirt designed for occasions and style.  Perfect for casual outings, parties, or layering for a trendy modelling look.",
          rating :"5/5",
-         price :110,
+         price :70,
          quantity:0,
          isFavourite :false 
     },
@@ -345,7 +345,7 @@ export const menClothing=[
          name:"sky-blue v-necked t-shirt",
          description :"Stylish and comfortable mens wear designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4.5/5",
-         price :120,
+         price :70,
          quantity:0,
          isFavourite :false 
     },
@@ -365,7 +365,7 @@ export const menClothing=[
          name:"denim shorts",
          description :"Stylish and comfortable unisex wear designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :100,
+         price :90,
          quantity:0,
          isFavourite :false 
     },  
@@ -375,7 +375,7 @@ export const menClothing=[
          name:"contrast stripe sweatshirt",
          description :"Stylish and comfortable mens wear designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :100,
+         price :80,
          quantity:0,
          isFavourite :false 
     },    
@@ -385,7 +385,7 @@ export const menClothing=[
          name:"flare fit jeans",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :110,
+         price :70,
          quantity:0,
          isFavourite :false 
     },    
@@ -395,7 +395,7 @@ export const menClothing=[
          name:"basic heavyweight t-shirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :120,
+         price :60,
          quantity:0,
          isFavourite :false 
     },    
@@ -405,7 +405,7 @@ export const menClothing=[
          name:"cotton-linen relaxed fit shirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },    
@@ -415,7 +415,7 @@ export const menClothing=[
          name:"regular fit shirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :100,
+         price :10,
          quantity:0,
          isFavourite :false 
     },    
@@ -425,7 +425,7 @@ export const menClothing=[
          name:"retro football t-shirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :100,
+         price :10,
          quantity:0,
          isFavourite :false 
     },    
@@ -435,7 +435,7 @@ export const menClothing=[
          name:"basic quarter-zip sweatshirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :190,
+         price :40,
          quantity:0,
          isFavourite :false 
     },    
@@ -445,7 +445,7 @@ export const menClothing=[
          name:"leather effect bomber jacket",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"5/5",
-         price :250,
+         price :100,
          quantity:0,
          isFavourite :false 
     },    
@@ -455,7 +455,7 @@ export const menClothing=[
          name:"comfort fit jogger waist trouser",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :190,
+         price :80,
          quantity:0,
          isFavourite :false 
     },  
@@ -465,7 +465,7 @@ export const menClothing=[
          name:"retro football print t-shirt",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4/5",
-         price :150,
+         price :15,
          quantity:0,
          isFavourite :false 
     },    
@@ -475,7 +475,7 @@ export const menClothing=[
          name:"leather effect biker jacket",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4.5/5",
-         price :230,
+         price :75,
          quantity:0,
          isFavourite :false 
     },    
@@ -485,7 +485,7 @@ export const menClothing=[
          name:"flare fit jeans",
          description :"Stylish and comfortable  designed for a perfect fit. Crafted with quality fabric, it’s versatile, durable, and easy to style for any occasion.”",
          rating :"4.5/5",
-         price :180,
+         price :18,
          quantity:0,
          isFavourite :false 
     },    
@@ -499,7 +499,7 @@ export const womenClothing=[
          name:"zw collection bomber jacket",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :250,
+         price :25,
          quantity:0,
          isFavourite :false 
     },
@@ -509,7 +509,7 @@ export const womenClothing=[
          name:"zw collection limited edition jacket",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :250,
+         price :80,
          quantity:0,
          isFavourite :false 
     },
@@ -519,7 +519,7 @@ export const womenClothing=[
          name:"leather bomber jacket zw collection",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :240,
+         price :90,
          quantity:0,
          isFavourite :false 
     },
@@ -529,7 +529,7 @@ export const womenClothing=[
          name:"collection belted gown",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :200,
+         price :70,
          quantity:0,
          isFavourite :false 
     },
@@ -539,7 +539,7 @@ export const womenClothing=[
          name:"short dress with draped sleeves", 
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :190,
+         price :80,
          quantity:0,
          isFavourite :false 
     },
@@ -549,7 +549,7 @@ export const womenClothing=[
          name:"knit sweater with embroidered design",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :100,
+         price :30,
          quantity:0,
          isFavourite :false 
     },
@@ -559,7 +559,7 @@ export const womenClothing=[
          name:"trench coat with belted waist",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :200,
+         price :105,
          quantity:0,
          isFavourite :false 
     },
@@ -569,7 +569,7 @@ export const womenClothing=[
          name:"wide leg loose fit trouser",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :130,
+         price :13,
          quantity:0,
          isFavourite :false 
     },
@@ -579,7 +579,7 @@ export const womenClothing=[
          name:"asymmetric lace dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -589,7 +589,7 @@ export const womenClothing=[
          name:"straight jean with raw hem",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -599,7 +599,7 @@ export const womenClothing=[
          name:"new floral midi dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          removeEventListenerating :"4/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -609,7 +609,7 @@ export const womenClothing=[
          name:"double breasted blazer jacket",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :210,
+         price :21,
          quantity:0,
          isFavourite :false 
     },
@@ -619,7 +619,7 @@ export const womenClothing=[
          name:"zw collection poplin shirt",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :120,
+         price :12,
          quantity:0,
          isFavourite :false 
     },
@@ -629,7 +629,7 @@ export const womenClothing=[
          name:"short faux leather jacket",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :230,
+         price :23,
          quantity:0,
          isFavourite :false 
     },
@@ -639,7 +639,7 @@ export const womenClothing=[
          name:"zw collection flare low pants",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :200,
+         price :25,
          quantity:0,
          isFavourite :false 
     },
@@ -649,7 +649,7 @@ export const womenClothing=[
          name:"zw midi denim dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :200,
+         price :32,
          quantity:0,
          isFavourite :false 
     },
@@ -659,7 +659,7 @@ export const womenClothing=[
          name:"zw overal jacket",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :200,
+         price :40,
          quantity:0,
          isFavourite :false 
     },
@@ -669,7 +669,7 @@ export const womenClothing=[
          name:"pleated midi dress with belt",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :200,
+         price :50,
          quantity:0,
          isFavourite :false 
     },
@@ -679,7 +679,7 @@ export const womenClothing=[
          name:"short dress with short sleeves",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :180,
+         price :18,
          quantity:0,
          isFavourite :false 
     },
@@ -689,7 +689,7 @@ export const womenClothing=[
          name:"long dress with belted waist",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -699,7 +699,7 @@ export const womenClothing=[
          name:"contrast topstitch trouser",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4/5",
-         price :100,
+         price :10,
          quantity:0,
          isFavourite :false 
     },
@@ -709,7 +709,7 @@ export const womenClothing=[
          name:"new poplin midi dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :150,
+         price :15,
          quantity:0,
          isFavourite :false 
     },
@@ -719,7 +719,7 @@ export const womenClothing=[
          name:"two-piece effect crepe dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"4.5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -729,7 +729,7 @@ export const womenClothing=[
          name:"zw collection poplin shirt dress",
          description :"Elevate your everyday style with this timeless piece, designed to blend comfort and elegance effortlessly. Crafted from quality fabric, it offers a flattering fit and versatile design that transitions seamlessly from casual outings to special occasions. A wardrobe essential that complements every woman’s unique style.",
          rating :"5/5",
-         price :230,
+         price :23,
          quantity:0,
          isFavourite :false 
     },
@@ -745,7 +745,7 @@ export const kidClothing=[
          name:"denim jacket with faux shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :190,
+         price :19,
          quantity:0,
          isFavourite :false 
     },
@@ -755,7 +755,7 @@ export const kidClothing=[
          name:"flared jeans",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :170,
+         price :17,
          quantity:0,
          isFavourite :false 
     },
@@ -765,7 +765,7 @@ export const kidClothing=[
          name:"the baby blue napkin",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :190,
+         price :21,
          quantity:0,
          isFavourite :false 
     },
@@ -775,7 +775,7 @@ export const kidClothing=[
          name:"brown mc-queen t-shirt ",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :140,
+         price :14,
          quantity:0,
          isFavourite :false 
     },
@@ -785,7 +785,7 @@ export const kidClothing=[
          name:"straight gray jeans",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :100,
+         price :21,
          quantity:0,
          isFavourite :false 
     },{
@@ -794,7 +794,7 @@ export const kidClothing=[
          name:"water repellent parka jacket",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :200,
+         price :20,
          quantity:0,
          isFavourite :false 
     },
@@ -804,7 +804,7 @@ export const kidClothing=[
          name:"girl pink bowed -dress",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :150,
+         price :15,
          quantity:0,
          isFavourite :false 
     },
@@ -814,7 +814,7 @@ export const kidClothing=[
          name:"gray hooded jacket",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :120,
+         price :12.4,
          quantity:0,
          isFavourite :false 
     },
@@ -824,7 +824,7 @@ export const kidClothing=[
          name:"a floral buttoned dress shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :100,
+         price :10.5,
          quantity:0,
          isFavourite :false 
     },
@@ -834,7 +834,7 @@ export const kidClothing=[
          name:"marvel spiderman t-shirt",
          description :"Keep your little one comfy and stylish with this adorable and nice piece from hexashop, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :190,
+         price :13,
          quantity:0,
          isFavourite :false 
     },
@@ -844,7 +844,7 @@ export const kidClothing=[
          name:"a floral printed jacket",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :210,
+         price :9,
          quantity:0,
          isFavourite :false 
     },
@@ -854,7 +854,7 @@ export const kidClothing=[
          name:"lilo stitch t-shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :100,
+         price :8,
          quantity:0,
          isFavourite :false 
     },
@@ -864,7 +864,7 @@ export const kidClothing=[
          name:"new sporty animal print top",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :150,
+         price :15,
          quantity:0,
          isFavourite :false 
     },
@@ -884,7 +884,7 @@ export const kidClothing=[
          name:"double sleeved print hoodie",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :180,
+         price :18,
          quantity:0,
          isFavourite :false 
     },
@@ -894,7 +894,7 @@ export const kidClothing=[
          name:"a denim jean cross-hand dress",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :155,
+         price :15.5,
          quantity:0,
          isFavourite :false 
     },
@@ -904,7 +904,7 @@ export const kidClothing=[
          name:"a light pink overall cloth",
          description :"warm up your little and sweet one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :120,
+         price :12.2,
          quantity:0,
          isFavourite :false 
     },
@@ -914,7 +914,7 @@ export const kidClothing=[
          name:"a light green overall cloth",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4.5/5",
-         price :110,
+         price :11.0,
          quantity:0,
          isFavourite :false 
     },
@@ -924,7 +924,7 @@ export const kidClothing=[
          name:"a spotted silky gown",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :190,
+         price :9.9,
          quantity:0,
          isFavourite :false 
     },
@@ -934,7 +934,7 @@ export const kidClothing=[
          name:"a gray zip-up hoodie",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :130,
+         price :13.5,
          quantity:0,
          isFavourite :false 
     },
@@ -944,7 +944,7 @@ export const kidClothing=[
          name:"raglan sleeve t-shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :125,
+         price :12.5,
          quantity:0,
          isFavourite :false 
     },
@@ -954,7 +954,7 @@ export const kidClothing=[
          name:"a gray lilo stitch t-shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :155,
+         price :8.4,
          quantity:0,
          isFavourite :false 
     },
@@ -964,7 +964,7 @@ export const kidClothing=[
          name:"new floral patterned dress ",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :125,
+         price :9.4,
          quantity:0,
          isFavourite :false 
     },
@@ -974,7 +974,7 @@ export const kidClothing=[
          name:"brown overall knicker and shirt",
          description :"Keep your little one comfy and stylish with this adorable piece, thoughtfully made from soft and breathable fabric. Designed for everyday play and special moments, it combines durability with a cute, modern look. A perfect choice for kids who deserve comfort, freedom, and fun in every outfit.",
          rating :"4/5",
-         price :167,
+         price :16.7,
          quantity:0,
          isFavourite :false 
     },

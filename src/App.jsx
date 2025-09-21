@@ -9,12 +9,13 @@ import PersonalInfo from './pages/PersonalInfo'
 import Aboutpage from './pages/Aboutpage'
 import ProductPage from './pages/ProductPage'
 import Kids from './pages/Kids'
+import Preference from './pages/Preference'
+import PaymentPage from './pages/PaymentPage'
 import Menspage from './pages/Menspage'
 import CartPage from './pages/CartPage'
 import Settingspage from './pages/Settingspage'
 import Notfound from './pages/Notfound'
 import FAQ from './pages/FAQ'
-import DeliveryPage from './pages/DeliveryPage'
 import Accessories from './pages/Accessories'
 import Help from './pages/Help'
 import Signup from './pages/Signup'
@@ -24,10 +25,11 @@ function App() {
   return (
     <>
     <Routes>
+       <Route path='/preferencepage' element ={<Preference/>} />
+       <Route path='/paymentpage' element={<PaymentPage/>} />
        <Route path='/addresspage' element={<Address/>} />
        <Route path='/deliverycheckoutpage' element={<DeliveryCheckout/>}/> 
         <Route path='/personalpage' element={<PersonalInfo/>} />
-        <Route path='/deliverypage' element={<DeliveryPage/>} />
         <Route path='/accessoriespage' element={<Accessories/>} />    
         <Route path='/helppage' element={<Help/>} />
         <Route path ='/faqpage' element={<FAQ/>} />

@@ -3,16 +3,18 @@ import Nav from '../components/Nav'
 import mencloth1 from '../assets/mencloth1.png'
 import Footer from '../components/Footer'
 import womencloth1 from '../assets/womencloth1.jpg'
+import LoadingComp from '../components/LoadingComp'
+import { Toaster } from 'react-hot-toast'
 import Collection from '../components/Collection'
 import AccessoriesCard from '../components/AccessoriesCard'
-import {useFave} from '../config/useFave'
 import {useCart} from '../config/CartProvider'
 const Accessories = () => {
-   const{scrollRef}=useCart()
-  const{loading}=useFave()
+   const{scrollRef,error,loading}=useCart()
   return (
     <>
       <Nav />
+        {loading ? (<LoadingComp/>):""}
+        <Toaster/>
         <div  className={`xs:mt-20 
             sm:mt-25 md:mt-27 lg:mt-29 `}>
           <p className="capitalize font-medium mb-3 w-fit ml-4 text-gray-700 xs:text-sm sm:text-md">

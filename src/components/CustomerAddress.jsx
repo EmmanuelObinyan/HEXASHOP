@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { addBusinessDays, format } from "date-fns";
 import { useAddress } from "../config/AddressContext";
+import { useCurrency } from "../config/CurrencyContext";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../config/CartProvider";
 const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
-  const { cart } = useCart();
-  // for the address
-  const { handleAddItem, deliveryCart } = useAddress();
+  const { cart ,fee} = useCart();
+  const{currencyData,option}=useCurrency()  // for the address
+  const { handleAddItem, deliveryCart, deliveryAddress } = useAddress();
   const navigate = useNavigate();
   // for the dynamic date changing
   const minDate = addBusinessDays(new Date(), mindays);
@@ -35,29 +36,54 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
   const handleRead = (e) => {
     const deliveryId = Number(e.target.value);
     const product = delivery.find((item) => item.id === deliveryId);
-     setSelectedProduct(product)
-     handleAddItem(product)
+    setSelectedProduct(product);
+    handleAddItem(product);
   };
+
+  // for the address
   return (
     <div className="mt-8 xs:w-[95%] sm:w-[80%] md:w-[70%] mx-auto">
       <p className="flex  items-center justify-between xs:text-md sm:text-lg md:text-xl lg:text-2xl font-medium capitalize text-gray-400">
         customer address
         <span
-          className=" mr-1 xs:text-xs md:text-sm lg:text-lg text-orange-400 font-light cursor-pointer"
+          className=" mr-1 xs:text-xs md:text-sm lg:text-md text-orange-400 font-light cursor-pointer"
           onClick={() => navigate("/addresspage")}
         >
           change
         </span>
       </p>
-      <div className=" border-1 border-gray-300 pb-2 xs:h-20 md:h-17 lg:h-18 px-3  bg-gray-50 ">
-        <p className="capitalize mt-4 mb-2 text-gray-700 font-semibold text-sm">
-          emmanuel obinyan
-        </p>
-        {/* the picked customer address */}
-        <p className="capitalize font-light text-gray-700 xs:text-xs md:text-sm">
-          imole oluwa estate sefu ota, adipisicing fghjklp hjjkk elit.....
-        </p>
-      </div>
+      {deliveryAddress.length >= 1 ? (
+        <>
+          {deliveryAddress.map((item, index) => (
+            <div
+              className=" border-1 border-gray-300 pb-2 xs:h-20 md:h-17 lg:h-18 px-3  bg-gray-50 "
+              key={index}
+            >
+              <p className="capitalize mt-4 mb-2 text-gray-700 font-semibold text-sm">
+                {`${item.firstname}  ${item.lastname}`}
+              </p>
+              {/* the picked customer address */}
+              <p className="capitalize font-light text-gray-700 xs:text-xs md:text-sm">
+                {`${
+                  item.address.length > 30
+                    ? item.address.slice(0, 30)
+                    : item.address
+                }${item.address.length > 30 ? "..." : ""}`}
+              </p>
+            </div>
+          ))}
+        </>
+      ) : (
+        <div className=" border-1 border-gray-300 pb-2 xs:h-20 md:h-17 lg:h-18 px-3  bg-gray-100 ">
+          <p className="capitalize mt-4 mb-2 text-gray-700 font-semibold xs:text-sm md:text-md">
+            no name
+          </p>
+          {/* the picked customer address */}
+          <p className="capitalize font-light text-gray-700 xs:text-xs md:text-sm">
+            no address
+          </p>
+        </div>
+      )}
 
       <p className="flex  items-center justify-between sm:text-sm  md:text-xl lg:text-2xl  xs:mt-6 sm:mt-8 md:mt-10 lg:mt-15 font-medium capitalize text-gray-400">
         delivery method
@@ -79,12 +105,12 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
               onChange={handleRead}
               checked={selectedProduct?.id === item.id}
               value={item.id}
-              className="sm:w-5 lg:w-10 border-2 "
+              className="sm:w-5 lg:w-6 border-2 "
             />
             <p className="capitalize font-semibold text-gray-700 xs:text-sm md:text-md lg:text-xl">
               {item.method}
-              <span className="xs:text-xs sm:text-sm md:text-md lg:text-lg font-light ml-2">
-                (15$)
+              <span className="xs:text-xs sm:text-sm md:text-md  font-light ml-2">
+                ({`  ${option === "NGN" ? "NGN": "$"} ${option === "NGN" ? Math.round(currencyData * fee):fee}`})
               </span>
             </p>
           </div>
@@ -99,11 +125,11 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
       <p className="flex  items-center xs:text-lg  md:text-xl lg:text-2xl mt-15 font-medium capitalize text-gray-400">
         shipment 1/1
       </p>
-      <div className="mt-3 border-1 border-gray-300  lg:h-[13rem] p-2 mb-3 bg-gray-50 ">
+      <div className="mt-3 border-1 border-gray-300  lg:h-[16rem] p-2 mb-3 bg-gray-50 ">
         {deliveryCart.map((item) => (
           <div key={item.id}>
             <p className="capitalize font-medium text-gray-700 py-2 xs:text-sm md:text-md lg:text-lg">
-              {item.method}(15$)
+              {item.method}({`  ${option === "NGN" ? "NGN": "$"} ${option === "NGN" ? Math.round(currencyData * fee):fee}`})
             </p>
             <p className="capitalize text-gray-800 mt-2 font-medium  xs:text-xs md:text-sm lg:text-md">
               {item.delivery}
@@ -135,7 +161,7 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
                 }`}</p>
 
                 <p className="mt-2 font-medium capitalize text-gray-700 xs:text-xs sm:text-md md:text-lg">
-                  ${item.quantity * item.price}
+                  {`${option === "NGN"? "NGN":"$"} ${option === "NGN"? Math.round(currencyData * item.price * item.quantity):item.price* item.quantity}`}
                 </p>
               </aside>
             </div>
@@ -155,6 +181,7 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
          md:w-50
          lg:w-55
          p-3
+         ${deliveryCart.length === 0 ? "pointer-events-none opacity-90" : ""}
          xs:text-center
          md:text-left
          border-0
@@ -169,7 +196,7 @@ const CustomerAddress = ({ mindays = 3, maxdays = 6 }) => {
          sm:text-sm
          md:text-md
          `}
-          onClick={""}
+          onClick={() => navigate("/paymentpage")}
         >
           confirm delivery details
         </div>

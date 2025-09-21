@@ -3,34 +3,24 @@ import Nav from "../components/Nav";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import CartProduct from "../components/CartProduct";
 import Footer from "../components/Footer";
-import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
+import LoadingComp from "../components/LoadingComp";
 import Marquee from "react-fast-marquee";
 import { useCart } from "../config/CartProvider";
 import { Link } from "react-router-dom";
 import CartTotal from "../components/CartTotal";
 import CategoryComp from "../components/CategoryComp";
 const CartPage = () => {
-  const { scrollRef, cart } = useCart();
-  const [categories, setCategories] = useState([]);
-  const fetchData = async () => {
-    try {
-      const res = await fetch("https://api.escuelajs.co/api/v1/categories");
-      const data = await res.json();
-      setCategories(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { scrollRef, cart, categories, loading } = useCart();
 
   return (
     <>
       <Nav />
+      <Toaster />
+      {loading ? <LoadingComp /> : ""}
       <div
         className={`xs:mt-22 
-                sm:mt-25 md:mt-27  ${cart.length > 0 ? "" :"bg-gray-100"}`}
+                sm:mt-25 md:mt-27  ${cart.length > 0 ? "" : "bg-gray-100"}`}
       >
         <p
           className="capitalize font-medium mb-3  w-fit ml-4 text-gray-700 xs:text-sm sm:text-md"

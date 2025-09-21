@@ -6,6 +6,7 @@ import { FaRegStarHalf } from "react-icons/fa";
 import { useCart } from "../config/CartProvider";
 import { MdOutlineCancel } from "react-icons/md";
 import Button from "../components/Button";
+import {useCurrency} from '../config/CurrencyContext'
 import { HiEmojiSad } from 'react-icons/hi';
 import Footer from "../components/Footer";
 import { toast, Toaster } from "react-hot-toast";
@@ -14,6 +15,7 @@ import { FaRegStar } from "react-icons/fa";
 import Nav from "../components/Nav";
 import Review from "../components/Review";
 const ProductPage = () => {
+  const{currencyData,option}=useCurrency()
   const { user } = useAuth();
   // for the global state for the cart
   const [rating, setRating] = useState("");
@@ -144,8 +146,8 @@ const ProductPage = () => {
                 </span>
               )}
 
-              <p className="ml-2 text-gray-700 py-4  border-b-1 xs:text-center md:text-left border-gray-300 font-semibold xs:text-lg sm:text-xl md:text-2xl lg:text-3xl">
-                ${product.price}
+              <p className="ml-2 text-gray-700 py-4  border-b-1 xs:text-center md:text-left border-gray-300 font-semibold xs:text-lg sm:text-xl md:text-2xl">
+                {`${option === 'NGN' ? "NGN" : "$"} ${option === 'NGN'? Math.round(currencyData * product.price ): product.price}`}
               </p>
               <p className=" xs:text-center md:text-left xs:text-xs sm:text-sm md:text-md  lg:text-lg text-gray-700 py-2">
                 {product.description}

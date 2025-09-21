@@ -74,14 +74,10 @@ const Settingspage = () => {
           <SettingsCard
             title={"global preferences"}
             show={5}
+            navigation={'/preferencepage'}
             text={"set your default currency,adjust theme and timezone"}
           />
-          <SettingsCard
-            title={"shipping & delivery"}
-            show={6}
-            navigation={"/deliverypage"}
-            text={"review and track your order,and update delivery details"}
-          />
+          
           <SettingsCard
             title={"help & FAQS"}
             navigation={"/helppage"}
@@ -104,6 +100,7 @@ const Settingspage = () => {
           />
         </div>
       </div>
+            <p className='uppercase my-4 text-center text-gray-800 xs:text-xs md:text-sm'>@hexashop 2025 edition limited</p>
     </>
   );
 };

@@ -23,14 +23,18 @@ export const CartProvider = ({ children }) => {
 
   // for the add to product page
   const addProduct = (product) => {
-      const items=productCart.find((item)=>item.id === product.id)
-        if(items){
-          setProductCart( productCart.map((item)=>
-          item.id === product.id ? {...item,quantity:item.quantity + 1}:item))
-        }
-         else{
-          setProductCart([...productCart,{...product,quantity:1}])
-         }
+    const items = productCart.find((item) => item.id === product.id);
+    if (items) {
+      setProductCart(
+        productCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setProductCart([...productCart, { ...product, quantity: 1 }]);
+    }
     toast.success("view product on product page", {
       style: {
         textTransform: "capitalize",
@@ -51,7 +55,7 @@ export const CartProvider = ({ children }) => {
       productCart.filter((item) => item.id !== id)
     );
   };
-  
+
   // for the scrolling into view
   const scrollRef = useRef(null);
   const handleScrollToTop = () => {
@@ -64,14 +68,12 @@ export const CartProvider = ({ children }) => {
       setCart(
         cart.map((item) =>
           item.id === product.id
-            ? { ...items,quantity: items.quantity + 1 }
+            ? { ...items, quantity: items.quantity + 1 }
             : item
         )
       );
     } else {
-      setCart(
-          [...cart,{ ...product,quantity:1 },]
-      );
+      setCart([...cart, { ...product, quantity: 1 }]);
     }
     toast.success(
       `the ${product.name || product.title} has been added to cart`,
@@ -80,7 +82,6 @@ export const CartProvider = ({ children }) => {
     setTimeout(() => {
       navigate("/cartspage");
     }, 2000);
-    
   };
   //  increase quantity in the cart page
   const increaseQuantity = (product) => {
@@ -90,10 +91,9 @@ export const CartProvider = ({ children }) => {
         cart.map((item) =>
           item.id === product.id
             ? { ...items, quantity: items.quantity + 1 }
-            : item 
+            : item
         )
       );
-    
     }
   };
   //  reduce quantity in the cartpage
@@ -103,11 +103,10 @@ export const CartProvider = ({ children }) => {
       setCart(
         cart.map((item) =>
           item.id === product.id
-            ? { ...item, quantity:item.quantity - 1 }
+            ? { ...item, quantity: item.quantity - 1 }
             : item
         )
       );
-       
     }
   };
   // to delete quantity from cart page
@@ -116,25 +115,79 @@ export const CartProvider = ({ children }) => {
   };
   //  for the sub total of items price in the cartpage
   const totalPrice = cart.reduce(
-    (acc,item) =>
-      acc + item.quantity  * 
-      item.price,
+    (acc, item) => acc + item.quantity * item.price,
     0
   );
-  
+
   // for the discount of items in the cartpage
   let price = 20 / 100;
   const discountPrice = price * totalPrice;
-  
+// to store the shpping fee value
+const[fee,setFee]=useState(0)
 
+  //  for the accessories page
+  // api to fetch accessories data and its state
+  const [accessories, setAccessories] = useState([]);
+  // loading state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const fetchData = async () => {
+    try {
+      const res = await fetch(`https://fakestoreapi.com/products/`);
+      const data = await res.json();
+      setAccessories(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false)
+      setError(error);
+      toast.error("an error occured" + error, {
+        style: {
+          textTransform: "capitalize",
+          color: "gray",
+        },
+      });
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
+  // for the category in the cart page ,
+  // another api
+  const [categories, setCategories] = useState([]);
+  const fetchDatas = async () => {
+    try {
+      const res = await fetch("https://api.escuelajs.co/api/v1/categories");
+      const data = await res.json();
+      setCategories(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false)
+      setError(error);
+      toast.error("an error occured" + error, {
+        style: {
+          textTransform: "capitalize",
+          color: "gray",
+        },
+      });
+    }
+  };
+  useEffect(() => {
+    fetchDatas();
+  }, []);
   return (
     <CartContext.Provider
-
       value={{
         totalPrice,
+        categories,
         discountPrice,
+        setFee,
+        fee,
         increaseQuantity,
         deleteCart,
+        accessories,
+        error,
+        loading,
         decreaseQuantity,
         addProduct,
         removeProduct,
