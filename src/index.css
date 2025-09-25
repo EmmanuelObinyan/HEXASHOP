@@ -11,7 +11,7 @@
   --font:Prompt,sans-serif;
 }
 * {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
