@@ -122,36 +122,49 @@ export const CartProvider = ({ children }) => {
   // for the discount of items in the cartpage
   let price = 20 / 100;
   const discountPrice = price * totalPrice;
-// to store the shpping fee value
-const[fee,setFee]=useState(0)
+  // to store the shpping fee value
+  const [shippingfee, setShippingFee] = useState(0);
+  useEffect(() => {
+    if (discountPrice >= 200) {
+      setShippingFee(10.56);
+    } else if (discountPrice <= 100) {
+      setShippingFee(5.45);
+    } else if (discountPrice <= 200) {
+      setShippingFee(9.55);
+    }
+  }, [discountPrice]);
 
+  const total = discountPrice + shippingfee;
   //  for the accessories page
   // api to fetch accessories data and its state
   const [accessories, setAccessories] = useState([]);
   // loading state
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const fetchData = async () => {
     try {
       const res = await fetch(`https://fakestoreapi.com/products/`);
       const data = await res.json();
       setAccessories(data);
-      setLoading(false);
     } catch (error) {
-      setLoading(false)
-      setError(error);
-      toast.error("an error occured" + error, {
-        style: {
-          textTransform: "capitalize",
-          color: "gray",
-        },
-      });
+      if (error.code === "failed to fetch") {
+        toast.error("an error occured,cant get items", {
+          style: {
+            textTransform: "capitalize",
+            color: "gray",
+          },
+        });
+      } else {
+        console.log(error);
+      }
     }
+     finally{
+      setLoading(false)
+     }
   };
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   // for the category in the cart page ,
   // another api
   const [categories, setCategories] = useState([]);
@@ -160,16 +173,21 @@ const[fee,setFee]=useState(0)
       const res = await fetch("https://api.escuelajs.co/api/v1/categories");
       const data = await res.json();
       setCategories(data);
-      setLoading(false);
-    } catch (error) {
+    } 
+     catch (error) {
+      if (error.code === "failed to fetch") {
+        toast.error("an error occured,cant get items", {
+          style: {
+            textTransform: "capitalize",
+            color: "gray",
+          },
+        });
+      } else {
+        console.log(error);
+      }
+    }
+    finally{
       setLoading(false)
-      setError(error);
-      toast.error("an error occured" + error, {
-        style: {
-          textTransform: "capitalize",
-          color: "gray",
-        },
-      });
     }
   };
   useEffect(() => {
@@ -181,12 +199,12 @@ const[fee,setFee]=useState(0)
         totalPrice,
         categories,
         discountPrice,
-        setFee,
-        fee,
+        setShippingFee,
+        shippingfee,
         increaseQuantity,
         deleteCart,
         accessories,
-        error,
+        total,
         loading,
         decreaseQuantity,
         addProduct,

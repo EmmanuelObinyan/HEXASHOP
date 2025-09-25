@@ -16,7 +16,7 @@ const Button = ({ disable, btnFunction, btnClassname, btnText }) => {
          md:w-45
          lg:w-50
          p-3
-         ${disable ? "opacity-90 pointer-events-none" : ""}
+         ${disable ? "opacity-75 pointer-events-none" : ""}
          border-0
          transition-all
          ease

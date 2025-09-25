@@ -16,6 +16,6 @@ export const AppProvider=({children})=>{
     </CartProvider>
     </AddressProvider>
     </ThemeProvider> 
-   </CurrencyProvider>   
+   </CurrencyProvider>  
     )
 }

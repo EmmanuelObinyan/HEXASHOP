@@ -31,7 +31,15 @@ export const ThemeProvider = ({ children }) => {
       setDark(theme);
     }
   }, []);
-
+// for the body
+useEffect(()=>{
+  if(dark){
+            
+  document.body.style.backgroundColor="#1A1D28"
+  }else{
+    document.body.style.backgroundColor='white'
+  }
+},[dark])
   return (
     <ThemeContext.Provider value={{ selected, setSelected, dark }}>
       {children}

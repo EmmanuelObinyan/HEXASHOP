@@ -8,16 +8,19 @@ import { Toaster } from 'react-hot-toast'
 import Collection from '../components/Collection'
 import AccessoriesCard from '../components/AccessoriesCard'
 import {useCart} from '../config/CartProvider'
+import {useTheme} from '../config/ThemeContext'
 const Accessories = () => {
    const{scrollRef,error,loading}=useCart()
+   const{dark}=useTheme()
   return (
     <>
       <Nav />
         {loading ? (<LoadingComp/>):""}
         <Toaster/>
         <div  className={`xs:mt-20 
+          ${dark ? "text-white":"text-gray-700"}
             sm:mt-25 md:mt-27 lg:mt-29 `}>
-          <p className="capitalize font-medium mb-3 w-fit ml-4 text-gray-700 xs:text-sm sm:text-md">
+          <p className="capitalize font-medium mb-3 w-fit ml-4  xs:text-sm sm:text-md">
                     {"homepage > accessories"}
                   </p>
               <h2
@@ -28,7 +31,6 @@ const Accessories = () => {
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             lg:text-3xl

@@ -4,33 +4,36 @@ import {useCurrency} from '../config/CurrencyContext'
 import { FaRegStarHalf } from "react-icons/fa";
 import { useCart } from "../config/CartProvider";
 import { FaRegStar } from "react-icons/fa";
+import {useTheme} from '../config/ThemeContext'
 import { FaShoppingCart } from "react-icons/fa";
 const ProductCard = ({ show, data }) => {
   // data
+  const{dark}=useTheme()
   const { addProduct } = useCart();
 // to change the currency value of the card
 const{option,currencyData}=useCurrency()
   return (
     <div
-      className="grid 
+      className={`grid 
             place-items-center 
             gap-1
             w-full
             bg-gray-150
             transition-all
             ease
+            ${dark ? "text-white":"text-gray-700"}
             duration-150 
             xs:grid-cols-2 
             sm:grid-cols-2 
             md:grid-cols-4 
-            lg:grid-cols-4 "
+            lg:grid-cols-4 `}
     >
       <Toaster />
       {show
         ? data.map((product) => (
             <div
               key={product.id}
-              className={`mb-2 p-2  xs:w-49 sm:w-58 md:w-59 lg:w-95 border-1 border-gray-200`}
+              className={`mb-2 p-2  xs:w-49 sm:w-58 md:w-59 lg:w-95 ${dark ? "border-1  border-gray-500":"border-1 border-gray-200"}`}
             >
               <img
                 src={product.image}
@@ -39,10 +42,10 @@ const{option,currencyData}=useCurrency()
               />
               <div className="flex flex-col ">
                 <div className="ml-2 border-b-1 border-gray-300">
-                  <p className="capitalize font-semibold  pb-1 leading-5 mb-1 border-b-1 border-gray-300 text-gray-800 xs:text-xs sm:text-sm md:text-md lg:text-lg">
+                  <p className="capitalize font-semibold  py-1 leading-5 mb-1 border-b-1 border-gray-300  xs:text-xs sm:text-sm md:text-md lg:text-lg">
                     {product.name}
                   </p>
-                  <span className="font-medium text-gray-600 mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
+                  <span className="font-medium  mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
                     {`${option === "NGN" ? "NGN" : "$"} ${option === "NGN" ? Math.round(currencyData * product.price ):product.price}`}
                   </span>
                 </div>
@@ -54,7 +57,7 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStarHalf className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
@@ -66,7 +69,7 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
@@ -77,14 +80,14 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
                   )}
                   <div className="flex justify-self-end justify-center mr-4 xs:w-12 sm:w-15 md:w-20 lg:w-25 xs:pb-1 lg:pb-3">
                     <FaShoppingCart
-                      className="text-gray-800 xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      className=" xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
                       onClick={() => addProduct(product)}
                     />
                   </div>
@@ -95,7 +98,7 @@ const{option,currencyData}=useCurrency()
         : data.slice(0, 4).map((product) => (
             <div
               key={product.id}
-              className={`mb-2 p-2 shadow xs:w-49 sm:w-58 md:w-59 lg:w-95 `}
+              className={`mb-2 p-2 shadow xs:w-49 sm:w-58 md:w-59 lg:w-95 ${dark ? "border-1  border-gray-500":"border-1 border-gray-200"}`}
             >
               <img
                 src={product.image}
@@ -104,10 +107,10 @@ const{option,currencyData}=useCurrency()
               />
               <div className="flex flex-col">
                 <div className="ml-2 border-b-1 border-gray-300">
-                  <p className="capitalize font-semibold pb-1 leading-5 mb-1 border-b-1 border-gray-300 text-gray-800 xs:text-xs sm:text-sm md:text-md lg:text-lg">
+                  <p className="capitalize font-semibold py-1 leading-5 mb-1 border-b-1 border-gray-300  xs:text-xs sm:text-sm md:text-md lg:text-lg">
                     {product.name}
                   </p>
-                  <span className="font-medium text-gray-600 mb-1 xs:text-sm sm:text-lg md:text-xl lg:text-2xl">
+                  <span className="font-medium  mb-1 xs:text-sm sm:text-lg md:text-xl lg:text-2xl">
                     {`${option === "NGN" ? "NGN" : "$"} ${option === "NGN" ? Math.round(currencyData * product.price ):product.price}`}
                   </span>
                 </div>
@@ -119,7 +122,7 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStarHalf className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
@@ -131,7 +134,7 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
@@ -142,14 +145,14 @@ const{option,currencyData}=useCurrency()
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
                       <FaRegStar className="text-yellow-400 text-lg" />
-                      <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                      <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                         {product.rating}
                       </p>
                     </span>
                   )}
                   <div className="flex justify-self-end justify-center mr-4 xs:w-12 sm:w-15 md:w-20 lg:w-25 xs:pb-1 lg:pb-3">
                     <FaShoppingCart
-                      className="text-gray-800 xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      className=" xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
                       onClick={() => addProduct(product)}
                     />
                   </div>

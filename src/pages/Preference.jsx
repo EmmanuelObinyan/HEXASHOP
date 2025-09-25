@@ -1,4 +1,10 @@
 import React from "react";
+import { BsFillPersonVcardFill } from "react-icons/bs";
+import { FcAbout } from "react-icons/fc";
+import { MdContactPhone } from "react-icons/md";
+import { FiHelpCircle } from "react-icons/fi";
+import { FcFaq } from "react-icons/fc";
+import Footer from "../components/Footer";
 import LoadingComp from "../components/LoadingComp";
 import { Link } from "react-router-dom";
 import { useCurrency } from "../config/CurrencyContext";
@@ -36,9 +42,11 @@ const Preference = () => {
   return (
     <div
       className={`xs:mt-3 
-            sm:mt-3 md:mt-4 lg:mt-5 ${dark ? "bg-[#1A1A1A]" : "bg-[white]"} `}
+            sm:mt-3 md:mt-4 lg:mt-5 transition-all ease-in-out duration-300 ${
+              dark ? "bg-[#1A1D28] text-white" : "bg-[white] text-gray-700"
+            } `}
     >
-       <Toaster/>
+      {error ? <Toaster /> : ""}
       {/* for loading state */}
       {loading ? <LoadingComp /> : ""}
       <h2
@@ -50,7 +58,6 @@ const Preference = () => {
            xs:ml-[9%]
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-md
             sm:text-xl
             lg:text-2xl
@@ -58,57 +65,72 @@ const Preference = () => {
       >
         theme/global preference
       </h2>
-      <p className="capitalize font-semibold mt-2 w-fit xs:ml-[9%] sm:ml-[13%] md:ml-[15%] lg:ml-[20%] text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400">
+      <p className="capitalize font-semibold mt-2 w-fit xs:ml-[9%] sm:ml-[13%] md:ml-[15%] lg:ml-[20%]  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400">
         customize your view according to your preference
       </p>
       <section className="flex ">
-        <div className=" border-t-1 border-b-1 border-gray-200 sm:w-[27%] md:w-[20%] sm:h-[35rem] md:h-[40rem]">
+        <div className="border-r-1 md:mt-3 border-[cream] sm:w-[27%] md:w-[20%] sm:h-[35rem] md:h-[40rem]">
           <Link
-            className="capitalize block font-semibold my-5 w-fit ml-4 text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            className="capitalize  block font-semibold my-5 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
             to={"/settingspage"}
           >
             back to settings
           </Link>
           <Link
-            className="capitalize block font-semibold my-7 w-fit ml-4 text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            className="capitalize flex items-center font-semibold my-7 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
             to={"/personalpage"}
           >
-            personal information
+            <BsFillPersonVcardFill className="w-fit  xs:h-5 md:h-6 lg:h-8 mr-1" />
+            personal nformation
           </Link>
+
+            <Link
+            className="capitalize flex items-center font-semibold my-7 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            to={"/helppage"}
+          >
+            <FiHelpCircle className="w-fit  xs:h-5 md:h-6 lg:h-8 mr-1" />
+            help
+          </Link>
+
           <Link
-            className="capitalize block font-semibold my-7 w-fit ml-4 text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            className="capitalize flex items-center font-semibold my-7 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
             to={"/aboutpage"}
           >
+            <FcAbout className="w-fit xs:h-5 md:h-6 lg:h-8 mr-1" />
             about us
           </Link>
 
           <Link
-            className="capitalize block font-semibold my-7 w-fit ml-4 text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            className="capitalize flex items-center font-semibold my-7 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
             to={"/contactpage"}
           >
+            <MdContactPhone className="w-fit xs:h-5  md:h-6 lg:h-8 mr-1" />
             contact & services
           </Link>
           <Link
-            className="capitalize block font-semibold my-7 w-fit ml-4 text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
+            className="capitalize flex items-center font-semibold my-7 w-fit ml-4  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 active:text-orange-400"
             to={"/faqpage"}
           >
+            <FcFaq className="w-fit xs:h-5 md:h-6 lg:h-8 mr-1" />
             frequently asked question
           </Link>
         </div>
         {/* theme preference and global preference */}
-        <div className="sm:w-[70%] md:w-[80%] lg:w-full border-l-1 border-gray-200">
+        <div className="sm:w-[70%] md:w-[80%] lg:w-full">
           {/* theme preference */}
           <div className="flex justify-self-center justify-between mt-15 xs:h-[25rem] sm:h-[30rem] md:h-[15rem] lg:h-[20rem] xs:w-[11rem] sm:w-[20rem] md:w-[35rem] lg:w-[60rem] xs:flex-col md:flex-row">
             {themeArray.map((item) => (
               <aside
-                className="sm:w-[full] md:w-[40%] lg:w-[45%]  rounded-xl border-1 border-gray-200"
+                className="sm:w-[full] md:w-[40%] lg:w-[45%]  rounded-xl shadow-lg border-[2%]"
                 key={item.id}
               >
                 {/* image */}
                 <div
                   className={`xs:h-[9rem] ${
-                    item.text === "dark mode" ? "bg-[#1A1A1A]" : ""
-                  } md:h-[12rem] lg:h-[16.9rem] flex items-center justify-center `}
+                    item.text === "dark mode" ? "bg-[#1A1D24]" : ""
+                  } md:h-[12rem] lg:h-[16.9rem] flex items-center justify-center ${
+                    item.text === "light mode" && dark ? "bg-[#FFFFFF] " : ""
+                  } `}
                 >
                   <img
                     src={item.image}
@@ -120,7 +142,7 @@ const Preference = () => {
                 </div>
                 {/* input field */}
                 <figure className="flex py-2 justify-around">
-                  <p className="capitalize xs:text-xs sm:text-sm md:text-md lg:text-lg text-gray-800  font-semibold ">
+                  <p className="capitalize xs:text-xs sm:text-sm md:text-md lg:text-lg   font-semibold ">
                     {item.text}
                   </p>
                   <input
@@ -145,7 +167,7 @@ const Preference = () => {
            xs:ml-[2%]
            uppercase pb-3 
            font-bold
-            text-gray-700 
+          
           xs:text-md
             sm:text-xl
             lg:text-2xl
@@ -153,7 +175,7 @@ const Preference = () => {
           >
             global preference
           </h2>
-          <p className="capitalize font-semibold mt-2 w-fit xs:ml-[2%] md:ml-[4%] lg:ml-[5%] text-gray-700 xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 ">
+          <p className="capitalize font-semibold mt-2 w-fit xs:ml-[2%] md:ml-[4%] lg:ml-[5%]  xs:text-xs sm:text-md lg:text-lg transition-all ease duration-200 ">
             customize your currency type to your preference
           </p>
           {/* for the global preference select */}
@@ -162,7 +184,9 @@ const Preference = () => {
               name="currency"
               id="currency"
               value={option}
-              className="xs:p-2 lg:p-3 xs:w-[90%] sm:w-[70%] md:w-[60%] lg:w-[60%] capitalize text-gray-700 font-semibold xs:text-xs sm:text-sm  lg:text-lg "
+              className={`${
+                dark ? "bg-[#1A1D25]" : ""
+              } xs:p-2 lg:p-3 xs:w-[90%] sm:w-[70%] md:w-[60%] lg:w-[60%] capitalize  font-semibold xs:text-xs sm:text-sm  lg:text-lg `}
               onChange={handleChange}
             >
               <option value="USD">USD (United State dollar)</option>
@@ -171,10 +195,7 @@ const Preference = () => {
           </aside>
         </div>
       </section>
-
-      <p className="uppercase my-3 text-center text-gray-800 xs:text-xs md:text-sm">
-        @hexashop 2025 edition limited
-      </p>
+      <Footer/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 import {toast} from "react-hot-toast";
+
 const CurrencyContext = createContext();
 
 export const CurrencyProvider = ({ children }) => {
@@ -37,20 +38,13 @@ export const CurrencyProvider = ({ children }) => {
         },
       } = data;
       setCurrencyData(rate);
-      
       setLoading(false);
-    } catch (err) {
+
+    } 
+    catch (err) {
       setLoading(false)
-      setError(err);
-     
-      if(err.name === "AbortError"){
-         setError(err)
-         toast.error("an error occured" + error)
-      }
-      else{
         setError(err)
       toast.error("an error occured" + error)
-      }
     }
   };
   useEffect(() => {
@@ -59,10 +53,11 @@ export const CurrencyProvider = ({ children }) => {
       controller.abort()}
   }, [option]);
   
-console.log(currencyData)
+// to track the payment
+const[value,setValue]=useState(false)
   return (
     <CurrencyContext.Provider
-      value={{ error, option, setOption, loading, currencyData }}
+      value={{ value,setValue,error, option,setOption, loading, currencyData }}
     >
       {children}
     </CurrencyContext.Provider>

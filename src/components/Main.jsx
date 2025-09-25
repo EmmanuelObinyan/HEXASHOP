@@ -3,16 +3,16 @@ import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {arrivals,Latest,menClothing,womenClothing,kidClothing} from '../Clothes'
 import Button from './Button'
+import {useTheme} from '../config/ThemeContext'
 import ProductCard from './ProductCard'
 const Main = () => {
   // for the array
   const[show,setShow]=useState(false)
   // for the navigation
   const navigate=useNavigate()
-   
+   const{dark}=useTheme()
   return (
-    <div className=''>
-     
+    <div className={`${dark ? "text-white":"text-gray-800"}`}>
            <h2 className='mt-7 
            text-center 
            border-b-1
@@ -20,7 +20,6 @@ const Main = () => {
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             md:text-3xl
@@ -44,7 +43,6 @@ const Main = () => {
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             md:text-3xl
@@ -64,7 +62,6 @@ const Main = () => {
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             md:text-3xl
@@ -86,7 +83,6 @@ const Main = () => {
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             md:text-3xl
@@ -104,11 +100,10 @@ const Main = () => {
               <h2 className='mt-7 
            text-center 
            border-b-1
-           border-gray-300
+           border-gray-3300
            shadow
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             md:text-3xl

@@ -8,6 +8,7 @@
   --shadow-black: 0px 0px 8px gray;
   --shadow-large: 0px 5px 20px black;
   --transition-slow: all ease 0.9s;
+  --font:Prompt,sans-serif;
 }
 * {
   /* outline: 2px solid red; */

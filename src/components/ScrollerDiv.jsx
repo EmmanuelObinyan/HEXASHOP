@@ -5,20 +5,22 @@ import mcdonalds from '../assets/mcdonalds.png'
 import nike from '../assets/nike.png'
 import dior from '../assets/dior.png'
 import jordan from '../assets/jordan.png'
+import {useTheme} from '../config/ThemeContext'
 import zara from '../assets/zara.png'
 const ScrollerDiv = () => {
+    const{dark}=useTheme()
   return (
        <>
-       <p className='text-center
+       <p className={`text-center
         p-2 mt-7
          font-bold 
-         text-gray-700
+          ${dark ? "text-white":"text-gray-800"}
          uppercase
          xs:text-xl
          sm:text-2xl
          md:text-3xl
          lg:text-4xl
-         '>top contributors</p>
+         `}>top contributors</p>
       <div className= 'bg-gray-900 mb-3'>
        < Marquee 
        gradientWidth={50} 

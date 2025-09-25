@@ -3,15 +3,17 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import { useCart } from "../config/CartProvider";
 import { FaMinus } from "react-icons/fa";
+import {useTheme} from '../config/ThemeContext'
 import {useCurrency} from '../config/CurrencyContext'
 const CartProduct = () => {
   const { cart, increaseQuantity, decreaseQuantity, deleteCart } = useCart();
    const{option,currencyData}=useCurrency()
+   const{dark}=useTheme()
   return (
     <>
       {cart.map((item) => (
         <div
-          className="h-fit flex   p-2 xs:flex-col lg:flex-row"
+          className={`h-fit flex ${dark ? "text-white":"text-gray-700"}  p-2 xs:flex-col lg:flex-row`}
           key={item.id}
         >
           {/* first section */}
@@ -26,20 +28,20 @@ const CartProduct = () => {
           <div className="md:h-50 lg:h-60 flex justify-between xs:flex-col lg:flex-row ">
             {/* inner sections */}
             <div className="md:w-[full] lg:w-[fit-content] flex flex-col justify-around">
-              <p className="xs:text-md md:text-xl lg:text-2xl text-gray-700 font-bold capitalize p-2 md:text-center lg:text-left">
+              <p className="xs:text-md md:text-xl lg:text-2xl  font-bold capitalize p-2 md:text-center lg:text-left">
                 {item.name || item.title}
               </p>
-              <p className="px-1 lg:-mt-2 font-light capitalize text-gray-700 xs:text-xs sm:text-sm lg:text-md">
+              <p className="px-1 lg:-mt-2 font-light capitalize  xs:text-xs sm:text-sm lg:text-md">
                 size: normal
               </p>
-              <p className="lg:-mt-8 font-light px-1 capitalize text-gray-700  xs:text-xs sm:text-sm lg:text-md">
+              <p className="lg:-mt-8 font-light px-1 capitalize   xs:text-xs sm:text-sm lg:text-md">
                 color: default color
               </p>
-              <p className="lg:-mt-8 font-medium px-1 capitalize text-gray-700  xs:text-xs sm:text-sm lg:text-md">
+              <p className="lg:-mt-8 font-medium px-1 capitalize   xs:text-xs sm:text-sm lg:text-md">
                 quantity:{item.quantity}x
               </p>
               {/* for the price */}
-              <p className="xs:text-md md:text-xl lg:text-2xl text-gray-700 p-2 font-semibold ">
+              <p className="xs:text-md md:text-xl lg:text-2xl  p-2 font-semibold ">
                 {`${option === 'NGN' ? "NGN" :"$"} ${option === 'NGN' ? Math.round(currencyData *item.price * item.quantity) : item.price * item.quantity}`}
               </p>
             </div>

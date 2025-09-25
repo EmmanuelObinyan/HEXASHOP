@@ -2,11 +2,13 @@ import React from 'react'
 import casual from '../assets/casual.png'
 import party from '../assets/party.png'
 import gym from '../assets/gym.png'
+import {useTheme} from "../config/ThemeContext"
 import formal from '../assets/formal.png'
 const Browse = () => {
+   const{dark}=useTheme()
   return (
     <div 
-    className='text-center 
+    className={`text-center 
     mt-20
     mb-2
     border-1
@@ -18,12 +20,12 @@ const Browse = () => {
     md:text-3xl
     lg:text-4xl 
     mx-auto
-    text-gray-800
+    ${dark ? "text-white":"text-gray-700"}
     font-bold
     sm:w-140
     md:w-200
     lg:w-320
-     capitalize'>
+     capitalize`}>
       browse by products
     <section 
     className='grid 

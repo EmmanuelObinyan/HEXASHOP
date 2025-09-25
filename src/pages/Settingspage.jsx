@@ -1,20 +1,23 @@
 import React from "react";
+import Footer from '../components/Footer'
 import { useAuth } from "../config/AuthContext";
 import SettingsCard from "./SettingsCard";
 import { Link } from "react-router-dom";
+import {useTheme} from '../config/ThemeContext'
 import { useCart } from "../config/CartProvider";
 const Settingspage = () => {
   const { scrollRef } = useCart();
   const { user } = useAuth();
+  const{dark}=useTheme()
   return (
     <>
       {/* <Nav /> */}
       <div
         className={`xs:mt-3 
-            sm:mt-3 md:mt-4 lg:mt-5 `}
+            sm:mt-3 md:mt-4 lg:mt-5 ${dark ? "text-white ":"text-gray-800"} `}
       >
         <Link
-          className="capitalize font-semibold mb-3 w-fit ml-4 text-gray-700 xs:text-sm sm:text-md transition-all ease duration-200 active:text-orange-400"
+          className="capitalize font-semibold mb-3 w-fit ml-4 xs:text-sm sm:text-md transition-all ease duration-200 active:text-orange-400"
           to={"/"}
         >
           back to home
@@ -22,16 +25,16 @@ const Settingspage = () => {
         {/*  for the username and email */}
 
         {user ? (
-          <p className="capitalize font-medium mt-5 w-fit ml-4 text-gray-700 xs:text-sm sm:text-md">
+          <p className="capitalize font-medium mt-5 w-fit ml-4  xs:text-sm sm:text-md">
             welcome {user.displayName || ""},
-            <span className="capitalize font-bold  w-fit ml-2 text-gray-700 xs:text-md sm:text-lg">
+            <span className="capitalize font-bold  w-fit ml-2  xs:text-md sm:text-lg">
               {user.email}
             </span>
           </p>
         ) : (
-          <p className="capitalize font-medium mt-5 w-fit ml-4 text-gray-700 xs:text-sm sm:text-md">
+          <p className="capitalize font-medium mt-5 w-fit ml-4  xs:text-sm sm:text-md">
             welcome guest user,
-            <span className="capitalize font-bold  w-fit ml-2 text-gray-700 xs:text-md sm:text-lg"></span>
+            <span className="capitalize font-bold  w-fit ml-2  xs:text-md sm:text-lg"></span>
           </p>
         )}
         <h2
@@ -39,7 +42,6 @@ const Settingspage = () => {
            text-center 
            uppercase pb-3 
            font-bold
-            text-gray-700 
           xs:text-xl
             sm:text-2xl
             lg:text-3xl
@@ -57,7 +59,7 @@ const Settingspage = () => {
           <SettingsCard
             title={"login & security"}
             show={2}
-            text={"update your password and secure your account"}
+            text={"update your password and secure your account,delete account"}
           />
           <SettingsCard
             title={"payments & payouts"}
@@ -80,7 +82,7 @@ const Settingspage = () => {
           
           <SettingsCard
             title={"help & FAQS"}
-            navigation={"/helppage"}
+            navigation={"*"}
             show={9}
             text={"information on features and solution to users needs"}
           />
@@ -98,9 +100,17 @@ const Settingspage = () => {
               "get our contact information to reach us and also give reviews"
             }
           />
+            <SettingsCard
+            title={"orders"}
+            navigation={"/orderspage"}
+            show={10}
+            text={
+              "review orders and items bought"
+            }
+          />
         </div>
       </div>
-            <p className='uppercase my-4 text-center text-gray-800 xs:text-xs md:text-sm'>@hexashop 2025 edition limited</p>
+         <Footer/>
     </>
   );
 };

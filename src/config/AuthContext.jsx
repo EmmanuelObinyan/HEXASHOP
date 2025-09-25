@@ -1,5 +1,7 @@
 import React, {createContext,useContext, useState,useEffect} from 'react'
-import { Auth } from './Firebase'
+import { Auth,db } from './Firebase'
+import {doc,setDoc} from 'firebase/firestore'
+import {toast} from 'react-hot-toast'
 import {onAuthStateChanged,signOut} from 'firebase/auth'
 
 const AuthContext= createContext()
@@ -10,6 +12,7 @@ export const AuthProvider=({children})=>{
  const[loading,setLoading]=useState(true)
     //   to call the users
     useEffect(()=>{
+        
       const unsubscribe= onAuthStateChanged(Auth,(currentuser)=>{
          setuser(currentuser)
           setLoading(false)
@@ -23,6 +26,7 @@ export const AuthProvider=({children})=>{
         signOut(Auth)
         navigate
     }
+    // for the user collection {name,email,phone number}
     return(
      <AuthContext.Provider value={{user,logOut,loading}}>
          {children}

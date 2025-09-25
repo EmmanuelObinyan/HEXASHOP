@@ -5,19 +5,21 @@ import { FaFacebook } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import {useTheme} from '../config/ThemeContext'
 import firstpart from '../assets/firstlogoimage.png'
 import secondpart from '../assets/imagelogo.png'
 const Footer = () => {
+    const{dark}=useTheme()
   return (
-      <div className='mt-40 bg-gray-900 h-fit mx-auto  px-5'>
+      <div className={`mt-40 bg-gray-900 h-fit mx-auto  px-5`}>
        {/* for the subscribe newsletter */}
           <SubForm/>
-    <div className='grid text-white rounded-xl pl-2 bg-gray-600 mt-4 place-items-center xs:grid-cols-1 gap-2 sm:h-fit md:h-55 sm:grid-cols-2 sm:gap-0 md:grid-cols-4 '>
+    <div className='grid text-white rounded-xl pl-2 bg-gray-800 mt-4 place-items-center xs:grid-cols-1 gap-2 sm:h-fit md:h-55 sm:grid-cols-2 sm:gap-0 md:grid-cols-4 '>
         {/* first column */}
         <div className='w-fit '>
                 <figure className="flex items-center mb-2 w-fit xs:gap-1 ">
-                    <img src={firstpart} alt="" className="xs:h-10 md:h-11 lg:h-14" />
-                    <img src={secondpart} alt="" className="xs:w-21 h-9 lg:h-10 w-38"/>
+                    <img src={firstpart} alt="" className={`xs:h-10 md:h-11 lg:h-14 transition-all ease duration-200 ${dark ? "brightness-90 invert":""}`} />
+                    <img src={secondpart} alt="" className={`xs:w-21 h-9 lg:h-10 w-38  transition-all ease duration-200 ${dark ? "brightness-90 invert":""}`}/>
                 </figure>
                    {/* title */}
                   <p 
@@ -94,6 +96,9 @@ const Footer = () => {
         </div>
        
     </div>
+     <p className="uppercase mt-3 text-center text-white  xs:text-xs md:text-sm">
+        @hexashop 2025 edition limited
+      </p>
    </div> 
   )
 }

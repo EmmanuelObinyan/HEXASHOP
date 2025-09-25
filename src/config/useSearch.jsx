@@ -11,22 +11,22 @@ export const useSearch=(data, mode = "partial")=> {
 
     switch (mode) {
       case "partial":
-        return data.filter(p => p.productName.toLowerCase().includes(q));
+        return data.filter(p => p.name.toLowerCase().includes(q));
       case "exact":
-        return data.filter(p => p.productName.toLowerCase() === q);
+        return data.filter(p => p.name.toLowerCase() === q);
       case "startsWith":
-        return data.filter(p => p.productName.toLowerCase().startsWith(q));
+        return data.filter(p => p.name.toLowerCase().startsWith(q));
       case "endsWith":
-        return data.filter(p => p.productName.toLowerCase().endsWith(q));
+        return data.filter(p => p.name.toLowerCase().endsWith(q));
       case "multiple": {
         const keywords = q.split(" ");
         return data.filter(p =>
-          keywords.some(kw => p.productName.toLowerCase().includes(kw))
+          keywords.some(kw => p.name.toLowerCase().includes(kw))
         );
       }
       case "regex": {
         const regex = new RegExp(query, "i");
-        return data.filter(p => regex.test(p.productName));
+        return data.filter(p => regex.test(p.name));
       }
       default:
         return data;

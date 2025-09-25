@@ -9,7 +9,6 @@ const Forgottenpassword = () => {
     const[email,setEmail]=useState("")
     // for the message
     // for the boolean value
-    const[value,setValue]=useState(false)
     const handlePasswordChange=async(e)=>{
         e.preventDefault();
          try{

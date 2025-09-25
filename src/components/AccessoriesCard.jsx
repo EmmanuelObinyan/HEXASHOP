@@ -2,19 +2,22 @@ import React, { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { FaRegStarHalf } from "react-icons/fa";
 import { useCart } from "../config/CartProvider";
+import {useTheme} from '../config/ThemeContext'
 import {useCurrency} from '../config/CurrencyContext'
 import { FaRegStar } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 const AccessoriesCard = ({ show }) => {
-  const { addProduct, accessories } = useCart();
+  const { addProduct,error, accessories } = useCart();
   const{currencyData,option}=useCurrency()
-  
+  const{dark}=useTheme()
   return (
     <div
-      className="grid 
+      className={`grid 
                 place-items-center 
                 gap-1
                 w-full
+                transition-all ease duration-200
+                ${dark ? "text-white":"text-gray-700"}
                 bg-gray-150
                 transition-all
                 ease
@@ -22,9 +25,9 @@ const AccessoriesCard = ({ show }) => {
                 xs:grid-cols-2 
                 sm:grid-cols-2 
                 md:grid-cols-4 
-                lg:grid-cols-4 "
+                lg:grid-cols-4 `}
     >
-      <Toaster />
+      {error ?<Toaster /> :""}
       {show
         ? accessories.map((product) => (
             <div
@@ -38,10 +41,10 @@ const AccessoriesCard = ({ show }) => {
               />
               <div className="flex flex-col ">
                 <div className="ml-2 border-b-1 border-gray-300">
-                  <p className="capitalize font-semibold  pb-1 leading-5 mb-1 border-b-1 border-gray-300 text-gray-800 xs:text-xs sm:text-sm md:text-md lg:text-lg">
+                  <p className="capitalize font-semibold  pb-1 leading-5 mb-1 border-b-1 border-gray-300 xs:text-xs sm:text-sm md:text-md lg:text-lg">
                     {product.title}
                   </p>
-                  <span className="font-medium text-gray-600 mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
+                  <span className="font-medium mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
                      {`${option === "NGN" ? "NGN" : "$"} ${option === "NGN" ? Math.round( currencyData * product.price ):product.price}`}
                   </span>
                 </div>
@@ -52,14 +55,14 @@ const AccessoriesCard = ({ show }) => {
                     <FaRegStar className="text-yellow-400 text-lg" />
                     <FaRegStar className="text-yellow-400 text-lg" />
                     <FaRegStarHalf className="text-yellow-400 text-lg" />
-                    <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                    <p className="font-medium xs:text-sm sm:text-md md:text-lg lg:text-xl">
                       4.5
                     </p>
                   </span>
 
                   <div className="flex justify-self-end justify-center mr-4 xs:w-12 sm:w-15 md:w-20 lg:w-25 xs:pb-1 lg:pb-3">
                     <FaShoppingCart
-                      className="text-gray-800 xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
+                      className=" xs:text-lg sm:text-xl md:text-2xl lg:text-3xl"
                       onClick={() => addProduct(product)}
                     />
                   </div>
@@ -79,10 +82,10 @@ const AccessoriesCard = ({ show }) => {
               />
               <div className="flex flex-col">
                 <div className="ml-2 border-b-1 border-gray-300">
-                  <p className="capitalize font-semibold pb-1 leading-5 mb-1 border-b-1 border-gray-300 text-gray-800 xs:text-xs sm:text-sm md:text-md lg:text-lg">
+                  <p className="capitalize font-semibold pb-1 leading-5 mb-1 border-b-1 border-gray-300 xs:text-xs sm:text-sm md:text-md lg:text-lg">
                     {product.title}
                   </p>
-                  <span className="font-medium text-gray-600 mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
+                  <span className="font-medium  mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
                     {`${option === "NGN" ? "NGN" : "$"} ${option === "NGN" ? Math.round( currencyData * product.price ):product.price}`}
                   </span>
                 </div>
@@ -93,7 +96,7 @@ const AccessoriesCard = ({ show }) => {
                     <FaRegStar className="text-yellow-400 text-lg" />
                     <FaRegStar className="text-yellow-400 text-lg" />
                     <FaRegStarHalf className="text-yellow-400 text-lg" />
-                    <p className="font-medium text-gray-800 xs:text-sm sm:text-md md:text-lg lg:text-xl">
+                    <p className="font-medium  xs:text-sm sm:text-md md:text-lg lg:text-xl">
                       4.5
                     </p>
                   </span>

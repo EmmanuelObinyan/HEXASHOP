@@ -1,8 +1,10 @@
 import React from 'react'
 import Nav from '../components/Nav'
+import { useTheme } from '../config/ThemeContext'
 const Notfound = () => {
+  const{dark}=useTheme()
   return (
-    <div className='bg-gray-100'>
+    <div className={` transition-all ease duration-200 ${dark ? "bg-[#1A1D26]":"bg-gray-100"}`}>
     <Nav/>
     <div className=' xs:mt-18 sm:mt-20 md:mt-24 lg:mt-25' >
         <div className='flex 

@@ -7,19 +7,21 @@ import Collection from "../components/Collection";
 import ProductCard from "../components/ProductCard";
 import { useSearch } from "../config/useSearch";
 import {useCart} from '../config/CartProvider';
+import {useTheme} from '../config/ThemeContext'
 import { kidClothing } from "../Clothes";
 import Search from "../components/Search";
 const Kids = () => {
   const { query, setQuery, results } = useSearch(kidClothing);
   const { scrollRef } = useCart();
+  const{dark}=useTheme()
   return (
     <>
       <Nav />
       <div
-        className={`xs:mt-22 
-                                sm:mt-25 md:mt-27 lg:mt-29 `}
+        className={`xs:mt-22 transition-all ease duration-200
+            ${dark ? "text-white":"text-gray-700"} sm:mt-25 md:mt-27 lg:mt-29 `}
       >
-        <p className="capitalize font-medium w-fit mb-3 ml-4 text-gray-700 xs:text-sm sm:text-md">
+        <p className="capitalize font-medium w-fit mb-3 ml-4 xs:text-sm sm:text-md">
           {"homepage > kids"}
         </p>
         <Search
@@ -39,7 +41,7 @@ const Kids = () => {
                                shadow
                                uppercase pb-3 
                                font-bold
-                                text-gray-700 
+                              
                               xs:text-xl
                                 sm:text-2xl
                                 lg:text-3xl
@@ -83,7 +85,7 @@ const Kids = () => {
                                shadow
                                uppercase pb-3 
                                font-bold
-                                text-gray-700 
+                              
                               xs:text-xl
                                 sm:text-2xl
                                 lg:text-3xl
