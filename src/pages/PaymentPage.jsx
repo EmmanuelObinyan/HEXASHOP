@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import {toast,Toaster} from 'react-hot-toast'
 import { useAuth } from "../config/AuthContext";
 import { db } from "../config/Firebase";
-import {setDoc,doc} from 'firebase/firestore'
+import {setDoc,doc,getDoc} from 'firebase/firestore'
 import LoadingComp from "../components/LoadingComp";
 import {useCart} from '../config/CartProvider'
 import { FaMinusCircle } from "react-icons/fa";
@@ -24,6 +24,7 @@ const PaymentPage = () => {
   const { deliveryAddress, details} = useAddress();
   const navigate = useNavigate();
   const [selected, setSelected] = useState("");
+  const[profile,setProfile]=useState(null)
   const handleChange = (e) => {
     setSelected(e.target.value);
   };
@@ -48,12 +49,12 @@ const PaymentPage = () => {
       const fetchData=async()=>{
         const orderId="ORD" + Date.now()
         if(selected === "payment on delivery" || value){
-         if(!user){
-          setLoading(false)
-          console.log("no user")
-          return
-         } 
-         try{
+                // to check user information
+            const ref=doc(db,"users",user.uid)
+            const snap=await getDoc(ref)
+            if(snap.exists()){
+              console.log("it exists")
+                       try{
           await setDoc(doc(db,"users",user.uid,"orders",orderId),{
               items:cart,
               item_price:totalPrice,
@@ -70,14 +71,32 @@ const PaymentPage = () => {
              navigate('/')
           },1000)
          }
+
          catch(error){
           console.log(error)
           setLoading(false)
          }
         }
+        if(!snap.data()){
+            setLoading(false)
+              toast.error("update profile info to order", {
+            style: {
+              textTransform: "capitalize",
+              fontWeight: "bold",
+              color: "gray",
+            },
+          })
+          setTimeout(()=>{
+           setSelected("")
+          },2000)
+          return
+            }
       }
+        
+
+     }
       fetchData()
-},[selected,value])
+},[selected,value,user?.uid])
   // for storing the order in the users collections
   return (
     <>

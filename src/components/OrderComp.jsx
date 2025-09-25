@@ -39,7 +39,7 @@ const OrderComp = ({ products }) => {
               <p className="capitalize font-semibold  py-1 leading-5 mb-1 border-b-1 border-gray-300  xs:text-xs sm:text-sm md:text-md lg:text-lg">
                 {product.name}
               </p>
-              <span className="font-medium  mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
+              <span className="font-light  mb-1 xs:text-md sm:text-lg md:text-xl lg:text-2xl">
                 {`${option === "NGN" ? "NGN" : "$"} ${
                   option === "NGN"
                     ? Math.round(currencyData * product.price)
@@ -47,7 +47,9 @@ const OrderComp = ({ products }) => {
                 }`}
               </span>
             </div>
-            <div></div>
+             <span className=" capitalize md:text-md lg:text-lg font-semibold mx-3">
+                  {`quantity x${product.quantity}`}
+                </span>
           </div>
           <span className="ml-1 flex items-center my-2">
             <FaCheckCircle className="mr-1 xs:h-5 sm:h-6 md:h-8 lg:h-10   xs:w-12 sm:w-15  md:w-17 lg:w-20 text-green-600 animate-pulse duration-200 ease" />

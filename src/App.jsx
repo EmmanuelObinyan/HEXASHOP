@@ -25,9 +25,13 @@ import { useAuth } from "./config/AuthContext";
 import Signup from "./pages/Signup";
 import Forgottenpassword from "./pages/Forgottenpassword";
 import Home from "./pages/Home";
+import LoadingComp from './components/LoadingComp'
 import ProtectedRoute from "./config/ProtectedRoute";
 function App() {
-  const { user } = useAuth();
+  const { user,loading } = useAuth();
+  if(loading){
+    return <LoadingComp/>
+  }
   return (
     <div>
       <Routes>
@@ -50,13 +54,13 @@ function App() {
         />
         <Route path="/preferencepage" element={<Preference />} />
         <Route path="/paymentpage" element={
-          <ProtectedRoute>
+          <ProtectedRoute user={user}>
           <PaymentPage />
           </ProtectedRoute>
           } />
         <Route path="/addresspage" element={<Address />} />
         <Route path="/deliverycheckoutpage" element={
-          <ProtectedRoute>
+          <ProtectedRoute user={user}>
           <DeliveryCheckout />
            </ProtectedRoute>
           } />
