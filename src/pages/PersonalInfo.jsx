@@ -271,7 +271,7 @@ const PersonalInfo = () => {
                 </p>
               </div>
             </div>):(
-              <div  className={` flex items-center justify-center xs:mx-auto md:mx-0 xs:w-[95%] sm:w-[80%] md:w-[50%] lg:w-[35%] xs:mb-2 md:mb-0 md:h-[40rem] ${
+              <div  className={` flex items-center justify-center xs:mx-auto md:mx-0 xs:w-[97%] sm:w-[80%] md:w-[50%] lg:w-[35%] xs:mb-2 md:mb-0 xs:h-[25rem] md:h-[40rem] ${
                 dark ? "bg-[#1A1D28]" : "bg-gray-50"
               }`}>
                  <p className="capitalize font-semibold  w-fit mx-auto  xs:text-sm sm:text-lg lg:text-lxl transition-all ease duration-200">

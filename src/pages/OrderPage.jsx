@@ -90,7 +90,7 @@ const OrderPage = () => {
                             md:text-4xl 
                             lg:text-5xl"
           >
-            no products added
+            no orders made
           </p>
         </div>
       )}
