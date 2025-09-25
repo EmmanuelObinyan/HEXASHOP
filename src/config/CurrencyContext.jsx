@@ -44,7 +44,7 @@ export const CurrencyProvider = ({ children }) => {
     catch (err) {
       setLoading(false)
         setError(err)
-      toast.error("an error occured" + error)
+      console.log("an error occured" + error)
     }
   };
   useEffect(() => {
