@@ -12,10 +12,12 @@ import {useTheme} from '../config/ThemeContext'
 const Accessories = () => {
    const{scrollRef,error,loading}=useCart()
    const{dark}=useTheme()
+   if(loading)return <LoadingComp/>
   return (
     <>
       <Nav />
-        {loading ? (<LoadingComp/>):""}
+     
+
         <Toaster/>
         <div  className={`xs:mt-20 
           ${dark ? "text-white":"text-gray-700"}

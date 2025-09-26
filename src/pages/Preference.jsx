@@ -38,7 +38,7 @@ const Preference = () => {
     setOption(e.target.value);
   };
   //  for the error
-
+  if(loading)return <LoadingComp/>
   return (
     <div
       className={`xs:mt-3 
@@ -48,7 +48,6 @@ const Preference = () => {
     >
       {error ? <Toaster /> : ""}
       {/* for loading state */}
-      {loading ? <LoadingComp /> : ""}
       <h2
         className="mt-8
            text-left

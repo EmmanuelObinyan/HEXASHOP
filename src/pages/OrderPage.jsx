@@ -36,9 +36,9 @@ const OrderPage = () => {
     };
     fetchData();
   }, [user?.uid]);
-  if (loading) {
+  if (loading) 
     return <LoadingComp />;
-  }
+  
   return (
     <div
       className={`xs:mt-3 

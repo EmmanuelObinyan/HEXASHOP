@@ -1,13 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import men1 from "../assets/men1.png";
 import { FcAbout } from "react-icons/fc";
 import { FcFaq } from "react-icons/fc";
 import Footer from "../components/Footer";
 import { MdContactPhone } from "react-icons/md";
 import { FiHelpCircle } from "react-icons/fi";
 import { useTheme } from "../config/ThemeContext";
-import { CgProfile } from "react-icons/cg";
 import { toast, Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import LoadingComp from "../components/LoadingComp";
@@ -105,32 +103,34 @@ const PersonalInfo = () => {
     }
   };
   useEffect(() => {
-    if (!user) {
-      setLoading(false);
-      return;
-    }
+    if (!user) 
+     return setLoading(false);
+    
     const fetchProfile = async () => {
       try {
         const ref = doc(db, "users", user.uid);
         const snapShot = await getDoc(ref);
         if (snapShot.exists()) {
           setProfile(snapShot.data());
-          setLoading(false)
         }
       } catch (error) {
-        setLoading(false)
         console.log(error);
       } 
+      finally{
+        setLoading(false)
+      }
     };
     fetchProfile();
   
   }, [user?.uid]);
 
 
+  if(loading){
+    return <LoadingComp/>
+  }
   return (
     <>
       <Toaster />
-      {loading ? <LoadingComp /> : ""}
       <div
         className={`xs:mt-3 
             sm:mt-3 md:mt-4 lg:mt-5 transition-all ease-in-out duration-300 ${

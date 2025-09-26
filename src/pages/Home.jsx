@@ -13,11 +13,11 @@ import Footer from "../components/Footer";
 const Home = () => {
   const { scrollRef } = useCart();
   const { loading } = useAuth();
-  
+    if(loading)return <LoadingComp/>
   return (
     <>
      <Toaster/>
-      {loading ? <LoadingComp /> : ""}
+    
       <Nav />
       <div className={`xs:mt-18  sm:mt-20 md:mt-24 lg:mt-25`}>
         <Header ref={scrollRef} />

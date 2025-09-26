@@ -98,6 +98,7 @@ const PaymentPage = () => {
       fetchData()
 },[selected,value,user?.uid])
   // for storing the order in the users collections
+   if(loading)return <LoadingComp/>
   return (
     <>
     <Toaster/>
@@ -105,7 +106,7 @@ const PaymentPage = () => {
         className={`xs:mt-3 
             sm:mt-3 md:mt-4 lg:mt-5 transition-all ease duration-200 ${dark ? "text-white bg-[#1A1D28]":"text-gray-700 bg-white"} `}
       >
-        {loading && selected !== "" ? <LoadingComp/> : ""}
+        
         <Link
           className="capitalize font-semibold mb-3 w-fit ml-4  xs:text-sm sm:text-md transition-all ease duration-200 active:text-orange-400"
           to={"/deliverycheckoutpage"}
@@ -210,9 +211,9 @@ const PaymentPage = () => {
              <img src={bankimg} className="mt-3 p-1" alt="" />
           </div>
            
-            <div className={` justify-center flex ${selected === "payment on delivery"|| value ? "transition-all ease duration-300 hidden":"flex transition-all ease duration-300"} ${selected === ""? "pointer-events-none opacity-80":""}`}>
+            {/* <div className={` justify-center flex ${selected === "payment on delivery"|| value ? "transition-all ease duration-300 hidden":"flex transition-all ease duration-300"} ${selected === ""? "pointer-events-none opacity-80":""}`}>
                 <Button btnText={"confirm order"} /> 
-            </div>
+            </div> */}
              
         </section>
       </div>

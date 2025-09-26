@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {useTheme} from '../config/ThemeContext'
 const Loading = () => {
+    const{dark}=useTheme()
   return (
     <StyledWrapper className='flex  items-center w-33 justify-between'>
       <div className="dot-spinner">
@@ -14,7 +15,7 @@ const Loading = () => {
         <div className="dot-spinner__dot" />
         <div className="dot-spinner__dot" />
       </div>
-      <p className='font-semibold text-white capitalize'>loading...</p>
+      <p className={`font-semibold transition-all ease duration-200 ${dark ? "text-white":"text-gray-700"} capitalize text-lg`}>loading...</p>
     </StyledWrapper>
   );
 }
@@ -26,6 +27,7 @@ const StyledWrapper = styled.div`
     --uib-color: #183153;
     position: relative;
     display: flex;
+    margin-right:3%;
     align-items: center;
     justify-content: flex-start;
     height: var(--uib-size);

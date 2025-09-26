@@ -35,9 +35,9 @@ const CartPage = () => {
     setTimeout(() => {
       setDisable(false);
     }, 6000);
-    if(loading){
+    if(loading)
       return <LoadingComp/>
-    }
+    
   };
   return (
     <>

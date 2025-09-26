@@ -27,7 +27,7 @@ const SettingsCard = ({ show = 1, title, text, navigation }) => {
   const{dark}=useTheme()
   return (
     <div
-      className={`xs:w-90 sm:w-65  lg:w-95  xs:h-45 sm:h-55 transition-all ease-in-out duration-200 ${dark ? "text-white border-gray-500":"text-gray-800 border-gray-300"} border-1  rounded-xl m-4 p-4 transition-all ease active:scale-95`}
+      className={`xs:mx-auto sm:mx-0 xs:w-87 sm:w-65  lg:w-95  xs:h-45 sm:h-55 transition-all ease-in-out duration-200 ${dark ? "text-white border-gray-500":"text-gray-800 border-gray-300"} border-1  rounded-xl m-4 p-4 transition-all ease active:scale-95`}
       onClick={() => navigate(`${navigation}`)}
     >
       {/* for the personal info */}
