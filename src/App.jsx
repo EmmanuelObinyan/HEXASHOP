@@ -28,10 +28,9 @@ import Home from "./pages/Home";
 import LoadingComp from './components/LoadingComp'
 import ProtectedRoute from "./config/ProtectedRoute";
 function App() {
-  const { user,loading } = useAuth();
+  const { user} = useAuth();
   return (
     <div>
-       {loading ? <LoadingComp/> : ""} 
       <Routes>
         <Route path="/orderspage" element={<OrderPage />} />
         <Route
