@@ -101,10 +101,10 @@ const PaymentPage = () => {
     };
     fetchData();
   }, [selected, value, user?.uid]);
-
+    if(loading)return <LoadingComp/>
   return (
     <>
-      {loading ? <LoadingComp /> : ""}
+      
       <Toaster />
       <div
         className={`xs:mt-3 
